@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# Secrets
+.env
+
+# 심사 결과 산출물 (로컬 기록 — 공유 원하면 주석 처리)
+results/reports/
+results/scores.csv
+results/scores.json
+results/state.json
+results/leaderboard.md
+
+# OS / tooling
+.DS_Store
+.omc/
+.openchrome/
+logs/
