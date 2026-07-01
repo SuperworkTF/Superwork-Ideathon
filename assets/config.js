@@ -26,13 +26,13 @@
       deadlineText: "2026.07.03 (금) 18:00 KST",
       resultText: "결과 발표 · 추후 공지",
       // --------------------------------
-      disclaimer: "결선 5개 · 순위 없음 · 번호는 ID일 뿐 순위가 아닙니다. 표시 순서는 방문마다 무작위이며, 점수·제안자는 공정한 투표를 위해 비공개됩니다.",
+      disclaimer: "결선 5개 · 순위 없음. 각 코드(DS·MR 등)는 식별용일 뿐 순위가 아닙니다. 표시 순서는 방문마다 무작위이며, 점수·제안자는 공정한 투표를 위해 비공개됩니다.",
       stakes: "당신의 한 표가 결과를 만듭니다."
     },
 
     ideas: [
       {
-        code: "01", slug: "doomsquat", name: "둠스쿼트", en: "DoomSquat",
+        code: "01", mono: "DS", slug: "doomsquat", name: "둠스쿼트", en: "DoomSquat",
         tagline: "스크롤하려면, 일단 앉았다 일어나",
         category: "웰빙·습관 / 온디바이스 AI",
         tags: ["웰빙·습관", "ON-DEVICE AI"],
@@ -47,7 +47,7 @@
         impact: "취침 직전 무의식적 진입에 ‘운동 한 세트’의 물리적 마찰을 걸어 숏폼 시간을 줄이고 취침을 앞당긴다. 덤으로, 낭비하던 시간이 근력 운동으로 남는 순(純)전환."
       },
       {
-        code: "02", slug: "moodrental", name: "무드렌탈", en: "MoodRental",
+        code: "02", mono: "MR", slug: "moodrental", name: "무드렌탈", en: "MoodRental",
         tagline: "감정 한 줄로 빌리는, 영화 같은 하루",
         category: "여가·로컬 / LLM 연출",
         tags: ["여가·로컬", "LLM"],
@@ -62,7 +62,7 @@
         impact: "‘구경만’ 하던 여가 앱을 실제 외출과 소비로 바꾸는 커머스형 서비스. 혼자서도 영화 같은 하루를 연출받는 경험. 커플·친구·외국인 관광객 모드로 확장 여지."
       },
       {
-        code: "03", slug: "freshkeep", name: "다썼다", en: "Freshkeep",
+        code: "03", mono: "FK", slug: "freshkeep", name: "다썼다", en: "Freshkeep",
         tagline: "사진 한 장으로 끝나는 유통기한 관리",
         category: "생활·소비 / AI 비전",
         tags: ["생활·소비", "AI VISION"],
@@ -77,7 +77,7 @@
         impact: "폐기·중복 구매 손실을 줄이고 기록의 수고를 없앤다. 음식물 쓰레기 절감이라는 사회적 효용까지."
       },
       {
-        code: "04", slug: "tryon", name: "입어봐AI", en: "Tryon AI",
+        code: "04", mono: "TO", slug: "tryon", name: "입어봐AI", en: "Tryon AI",
         tagline: "내 사진 위에, 실제로 입어보는 하루",
         category: "커머스·AI / 가상 피팅",
         tags: ["커머스·패션", "VIRTUAL TRY-ON"],
@@ -92,7 +92,7 @@
         impact: "직접 입어보지 않고도 어울림을 확인해 온라인 패션 쇼핑의 실패율을 낮춘다. 쇼핑몰엔 ‘입어보기’ 위젯으로 반품률을 낮추는 B2B 확장, 어필리에이트 연동으로 구매까지 매끄럽게. (고성능 가상 피팅 AI가 저렴한 API로 열려 짧은 기간에도 구현 가능.)"
       },
       {
-        code: "05", slug: "gudokja", name: "구독자", en: "Gudokja",
+        code: "05", mono: "GD", slug: "gudokja", name: "구독자", en: "Gudokja",
         tagline: "다음 달도 낼 건가요? — 결제 전에 다시 묻는다",
         category: "핀테크·절약",
         tags: ["핀테크·절약", "SUBSCRIPTION"],
