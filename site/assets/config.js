@@ -20,7 +20,7 @@
       titleKo: "결선 5選",
       kicker: "전사 투표 · COMPANY-WIDE VOTE",
       // --- EDIT THESE BEFORE LAUNCH ---
-      voteUrl: "#",                                 // 외부 투표 채널 URL (구글폼/슬랙 등)
+      voteUrl: "https://gw.nasmedia.co.kr/app/survey/327",  // 사내 그룹웨어 설문 (임직원 PC/사내망 접근)
       voteLabel: "투표하러 가기",
       voteDeadline: "2026-07-03T18:00:00+09:00",    // 마감 (KST)
       deadlineText: "2026.07.03 (금) 18:00 KST",
