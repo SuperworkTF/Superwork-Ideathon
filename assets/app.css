@@ -204,9 +204,10 @@ body.cursor-active,body.cursor-active a,body.cursor-active button{cursor:none;}
 .hero__meta{margin-top:var(--s6);display:flex;flex-wrap:wrap;gap:10px;}
 
 /* deadline countdown band — urgent, flare */
-.cdband-sec{padding-top:var(--s7);}
+.cdband-sec{padding-top:var(--s7);padding-bottom:var(--s3);}
 .cdband{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:var(--s5);
-  border:2px solid var(--flare);background:var(--base-2);padding:clamp(20px,3vw,30px) clamp(20px,3.5vw,40px);}
+  border:2px solid var(--flare);background:var(--base-2);padding:clamp(20px,3vw,30px) clamp(20px,3.5vw,40px);
+  box-shadow:9px 9px 0 var(--flare);}
 .cdband__main{display:flex;flex-direction:column;gap:16px;}
 .cdband__k{color:var(--flare);}
 .cdclock{display:flex;align-items:flex-start;gap:clamp(8px,1.6vw,18px);}
