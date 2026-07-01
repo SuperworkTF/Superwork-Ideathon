@@ -52,7 +52,7 @@ ${FONTS}
     <span class="label" style="color:var(--smoke)">투표 마감</span>
     <span class="cd tnum" data-countdown>D-—</span>
   </div>
-  <a class="btn" data-vote-url href="#" data-cursor>투표하러 가기 <span class="ar">→</span></a>
+  <a class="btn" data-vote-url href="${meta.voteUrl}" target="_blank" rel="noopener" data-cursor>투표하러 가기 <span class="ar">→</span></a>
 </header>
 
 <main class="wrap">
@@ -104,7 +104,7 @@ ${FONTS}
         <p class="dcta__lead">이 아이디어가 좋다면,<br>한 표.</p>
         <p class="dcta__meta">투표 마감 · 2026.07.03 (금) 18:00 KST<br>사내망 · 전사 투표 채널</p>
       </div>
-      <a class="btn" data-vote-url href="#" data-cursor>투표하러 가기 <span class="ar">→</span></a>
+      <a class="btn" data-vote-url href="${meta.voteUrl}" target="_blank" rel="noopener" data-cursor>투표하러 가기 <span class="ar">→</span></a>
     </div>
   </section>
 

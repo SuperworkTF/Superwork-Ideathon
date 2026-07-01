@@ -17,13 +17,10 @@
 
   /* ---- 1. Vote CTA href injection --------------------------- */
   $$("[data-vote-url]").forEach((a) => {
-    if (meta.voteUrl && meta.voteUrl !== "#") {
-      a.href = meta.voteUrl; a.target = "_blank"; a.rel = "noopener";
-      a.removeAttribute("aria-disabled");
-    } else {
-      a.setAttribute("aria-disabled", "true");
-      a.setAttribute("title", "투표 링크가 곧 연결됩니다");
-    }
+    // href is baked into the HTML (works with no/old/failed JS).
+    // Only upgrade to config's URL when it's a real one; never disable.
+    if (meta.voteUrl && meta.voteUrl !== "#") { a.href = meta.voteUrl; a.target = "_blank"; a.rel = "noopener"; }
+    a.removeAttribute("aria-disabled");
   });
 
   /* ---- 2. Countdown to deadline (text + segmented, tabular, flare) --- */
