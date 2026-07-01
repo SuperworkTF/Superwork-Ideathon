@@ -26,24 +26,29 @@
     }
   });
 
-  /* ---- 2. Countdown to deadline (mono, tabular, flare) ------- */
+  /* ---- 2. Countdown to deadline (text + segmented, tabular, flare) --- */
   const cds = $$("[data-countdown]");
-  if (cds.length && meta.voteDeadline) {
+  const seg = { d: $$("[data-cd-days]"), h: $$("[data-cd-hours]"), m: $$("[data-cd-mins]"), s: $$("[data-cd-secs]") };
+  const wraps = $$("[data-cd-wrap]");
+  if ((cds.length || seg.d.length) && meta.voteDeadline) {
     const end = new Date(meta.voteDeadline).getTime();
     const pad = (n) => String(n).padStart(2, "0");
+    const setAll = (els, v) => els.forEach((e) => { e.textContent = v; });
     const render = () => {
       const diff = end - Date.now();
       if (isNaN(end)) return;
       if (diff <= 0) {
-        cds.forEach((el) => { el.textContent = "투표 마감 · 결과 곧 공개"; el.classList.add("is-closed"); });
+        cds.forEach((el) => { el.textContent = "투표 마감"; el.classList.add("is-closed"); });
+        setAll(seg.d, "00"); setAll(seg.h, "00"); setAll(seg.m, "00"); setAll(seg.s, "00");
+        wraps.forEach((w) => w.classList.add("is-closed"));
         return true;
       }
       const d = Math.floor(diff / 864e5);
       const h = Math.floor((diff % 864e5) / 36e5);
       const m = Math.floor((diff % 36e5) / 6e4);
       const s = Math.floor((diff % 6e4) / 1e3);
-      const txt = `D-${d} · ${pad(h)}:${pad(m)}:${pad(s)}`;
-      cds.forEach((el) => { el.textContent = txt; });
+      cds.forEach((el) => { el.textContent = `D-${d} · ${pad(h)}:${pad(m)}:${pad(s)}`; });
+      setAll(seg.d, pad(d)); setAll(seg.h, pad(h)); setAll(seg.m, pad(m)); setAll(seg.s, pad(s));
     };
     render();
     if (!reduce) { const iv = setInterval(() => { if (render() === true) clearInterval(iv); }, 1000); }
